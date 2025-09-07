@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 让容器的宽度和高度都充满全屏 */
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+
+        body {
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .heart {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            transform: rotate(45deg);
+            animation: heartHit 1s alternate infinite;
+            box-shadow: 0 0 30px red;
+
+        }
+
+        .heart::before {
+            content: "";
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: -99px;
+            left: 0px;
+            border-radius: 100px 100px 0 0;
+            box-shadow: 0 0 30px red;
+        }
+        .heart::after {
+            content: "";
+            width: 100px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            top: 0px;
+            left: -99px;
+            border-radius:100px 0 0 100px;
+            box-shadow: 0 0 30px red;
+        }
+        @keyframes heartHit{
+            0%{
+                transform: rotate(45deg) scale(0.2);
+            }
+            100%{
+                transform: rotate(45deg) scale(1.5);
+        }
+    }
+
+        /* 实现动画  让心跳动起来 */
+    </style>
+</head>
+
+<body>
+    <div class="heart"></div>
+</body>
+
+</html>
