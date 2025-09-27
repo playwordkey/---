@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #6a89cc, #f8a5c2);
+    }
+.btnn{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin: 2px;
+    cursor: pointer;
+    border: none;
+    background-color: #59706e;
+    color: white;
+}
+.textvlue{
+    width: 208px;
+    margin: 5px;
+    height: 30px;
+    font-size: 25px;
+    border: none;
+    padding: 5px;
+    color:59706e ;
+}
